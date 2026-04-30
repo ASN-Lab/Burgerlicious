@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Menu Management - Burgerlicious Admin Panel</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#764500",
+                        "on-tertiary-container": "#5b3900",
+                        "on-secondary": "#fff0e5",
+                        "outline-variant": "#acadae",
+                        "tertiary-fixed-dim": "#ebad59",
+                        "surface-tint": "#b41c00",
+                        "surface-variant": "#dbddde",
+                        "surface-container-high": "#e1e3e4",
+                        "primary-dim": "#9e1700",
+                        "tertiary-container": "#fabb65",
+                        "on-primary-fixed": "#000000",
+                        "on-tertiary": "#fff0e2",
+                        "tertiary": "#805200",
+                        "inverse-on-surface": "#9c9d9e",
+                        "secondary-fixed-dim": "#ffb462",
+                        "tertiary-dim": "#704700",
+                        "on-background": "#2d2f30",
+                        "primary": "#b41c00",
+                        "inverse-primary": "#ff5536",
+                        "on-secondary-container": "#693d00",
+                        "surface-dim": "#d2d5d6",
+                        "on-primary-fixed-variant": "#5d0900",
+                        "on-secondary-fixed": "#4e2c00",
+                        "on-tertiary-fixed-variant": "#674100",
+                        "secondary-container": "#ffc78e",
+                        "on-surface": "#2d2f30",
+                        "on-primary-container": "#4c0600",
+                        "error-dim": "#b92902",
+                        "on-surface-variant": "#5a5c5d",
+                        "error-container": "#f95630",
+                        "on-error-container": "#520c00",
+                        "surface": "#f6f6f7",
+                        "background": "#f6f6f7",
+                        "error": "#b02500",
+                        "primary-fixed": "#ff775d",
+                        "tertiary-fixed": "#fabb65",
+                        "surface-container-highest": "#dbddde",
+                        "surface-container": "#e7e8e9",
+                        "on-error": "#ffefec",
+                        "outline": "#757778",
+                        "on-primary": "#ffefec",
+                        "on-tertiary-fixed": "#402700",
+                        "surface-container-low": "#f0f1f2",
+                        "primary-container": "#ff775d",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#ffc78e",
+                        "surface-bright": "#f6f6f7",
+                        "secondary-dim": "#744400",
+                        "primary-fixed-dim": "#ff5c3d",
+                        "inverse-surface": "#0c0e0f",
+                        "secondary": "#854f00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Be Vietnam Pro"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+    <!-- SideNavBar -->
+    <nav class="h-screen w-64 fixed left-0 top-0 bg-stone-50 dark:bg-stone-950 border-r border-stone-200 dark:border-stone-800 flex flex-col h-full py-6 font-['Be_Vietnam_Pro'] text-sm z-40">
+        <div class="px-6 mb-10">
+            <h1 class="text-xl font-bold text-stone-900 dark:text-stone-50">Admin Panel</h1>
+            <p class="text-xs text-stone-500 uppercase tracking-wider">Burgerlicious Management</p>
+        </div>
+        <div class="flex-1 space-y-1">
+            <a class="text-stone-500 dark:text-stone-400 px-4 py-3 mx-2 flex items-center gap-3 hover:bg-stone-200 dark:hover:bg-stone-800 rounded-full transition-all duration-200 ease-in-out" href="dashboard.html">
+                <span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                <span>Dashboard</span>
+            </a>
+            <a class="bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300 rounded-full mx-2 px-4 py-3 font-semibold flex items-center gap-3 transition-all duration-200 ease-in-out" href="#">
+                <span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span>
+                <span>Menu Management</span>
+            </a>
+            <a class="text-stone-500 dark:text-stone-400 px-4 py-3 mx-2 flex items-center gap-3 hover:bg-stone-200 dark:hover:bg-stone-800 rounded-full transition-all duration-200 ease-in-out" href="order-queue.html">
+                <span class="material-symbols-outlined" data-icon="pending_actions">pending_actions</span>
+                <span>Order Queue</span>
+            </a>
+            <a class="text-stone-500 dark:text-stone-400 px-4 py-3 mx-2 flex items-center gap-3 hover:bg-stone-200 dark:hover:bg-stone-800 rounded-full transition-all duration-200 ease-in-out" href="analytics.html">
+                <span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+                <span>Analytics</span>
+            </a>
+        </div>
+        <div class="mt-auto px-4">
+            <div class="flex items-center gap-3 p-4 bg-surface-container-low rounded-xl mb-4">
+                <img class="w-10 h-10 rounded-full object-cover" data-alt="Admin profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8Cu_BIerUaUneo_LN-UBetnxt_RAVsG3RKh76Cd3_aIa2x1fs6W6x3sBlzSvmdraNm8JrNL3qRptRtDbGKWDT07KUjrO0cO_3-Uyv0o-YGtg2VLBeOIlDMO_5C9Lhiv-t10UO9VhDg2pGQtEurYnQI4FLc6YTSjtEVi3tDuqSgNyl_-reVQ7p5mMqc5i6FrqPbplc2SyKv4aX1PiqG_9DYi_624HH1nT9bd4vLj1GFtXfe0JawSEUE_mF-WLBEqlUiyukvI9sPhM" />
+                <div>
+                    <p class="font-bold text-on-surface text-xs">Admin User</p>
+                    <p class="text-[10px] text-on-surface-variant">Admin User Profile</p>
+                </div>
+            </div>
+            <button class="w-full py-3 px-4 text-red-600 font-bold hover:bg-red-50 rounded-full transition-colors flex items-center justify-center gap-2">
+                <span class="material-symbols-outlined" data-icon="logout">logout</span>
+                Logout
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content Canvas -->
+    <main class="ml-64 p-8 min-h-screen">
+        <!-- Header & Notifications -->
+        <header class="flex justify-between items-center mb-10">
+            <div>
+                <h2 class="text-3xl font-extrabold tracking-tight text-on-surface">Menu Management</h2>
+                <p class="text-on-surface-variant font-medium">Add, edit, and manage your burger menu items.</p>
+            </div>
+            <div class="flex gap-4 items-center">
+                <button class="bg-primary hover:bg-primary-dim text-on-primary px-6 py-3 rounded-full font-bold shadow-lg shadow-primary/20 transition-all active:scale-95 flex items-center gap-2">
+                    <span class="material-symbols-outlined" data-icon="add">add</span>
+                    Add Menu Item
+                </button>
+            </div>
+        </header>
+
+        <!-- Menu Items Table -->
+        <section class="bg-surface-container-lowest rounded-lg shadow-sm border border-outline-variant/10 overflow-hidden mb-20">
+            <div class="p-6 border-b border-surface-container">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-lg font-extrabold">All Menu Items</h3>
+                    <div class="flex gap-2">
+                        <input class="px-4 py-2 bg-surface-container rounded-full text-xs border-none focus:ring-1 focus:ring-primary" placeholder="Search menu..." type="text" />
+                        <button class="flex items-center gap-2 text-xs font-bold text-on-surface-variant px-4 py-2 bg-surface-container rounded-lg hover:bg-surface-container-high transition-colors">
+                            <span class="material-symbols-outlined text-sm" data-icon="filter_list">filter_list</span>
+                            Filter
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <table class="w-full text-left border-collapse">
+                <thead class="bg-surface-container-low text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">
+                    <tr>
+                        <th class="px-6 py-4">Item Name</th>
+                        <th class="px-6 py-4">Category</th>
+                        <th class="px-6 py-4">Price</th>
+                        <th class="px-6 py-4">Stock</th>
+                        <th class="px-6 py-4">Status</th>
+                        <th class="px-6 py-4 text-right">Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-surface-container text-sm">
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="ml-64 w-[calc(100%-16rem)] py-12 bg-stone-100 dark:bg-stone-900 border-t border-stone-200 dark:border-stone-800 flex flex-col md:flex-row justify-between items-center px-12 gap-6 font-['Be_Vietnam_Pro'] text-xs uppercase tracking-widest">
+        <div class="text-lg font-black text-stone-800 dark:text-stone-200">Burgerlicious</div>
+        <div class="flex gap-8 text-stone-500 dark:text-stone-400">
+            <a class="hover:text-stone-800 underline underline-offset-4 opacity-80 hover:opacity-100 transition-opacity" href="#">Privacy Policy</a>
+            <a class="hover:text-stone-800 underline underline-offset-4 opacity-80 hover:opacity-100 transition-opacity" href="#">Terms of Service</a>
+            <a class="hover:text-stone-800 underline underline-offset-4 opacity-80 hover:opacity-100 transition-opacity" href="#">Contact Us</a>
+        </div>
+        <div class="text-stone-500 dark:text-stone-400">© 2024 Burgerlicious. Crafted for the flavorful.</div>
+    </footer>
+</body>
+</html>
